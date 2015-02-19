@@ -4,9 +4,10 @@ var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
 var PlayerSchema = new Schema({
-  name: String,
-  info: String,
-  active: Boolean
+  firstName: String,
+  lastName: String,
+  number: String,
+  teamAge: String
 });
 
 module.exports = mongoose.model('Player', PlayerSchema);

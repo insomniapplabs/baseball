@@ -1,0 +1,35 @@
+<div ng-include="'components/navbar/dashboardnavbar.html'"></div>
+
+<div class="dash-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Dashboard</h2>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+
+      <h3>Active Teams</h3>
+      <div ng-repeat="team in teams">
+        Skeeters {{team.age}} <a href="#" ng-click="deleteTeam(team)">Delete</a>
+      </div>
+      <br>
+      <form>
+        <div class="form-group">
+          <label>Add a new team:</label>
+          <input type="text" class="form-control" ng-model="newTeamAge" />
+        </div>
+        <button class="btn btn-default" ng-click="addTeam()">Add Team</button>
+      </form>
+    </div>
+
+    <div class="col-md-offset-1 col-md-8">
+      <h3>Upcoming Events</h3>
+    </div>
+  </div>
+</div>

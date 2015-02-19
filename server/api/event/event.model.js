@@ -4,9 +4,16 @@ var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
 var EventSchema = new Schema({
-  name: String,
-  info: String,
-  active: Boolean
+  title: String,
+  description: String,
+  location: String,
+  start: Date,
+  end: Date,
+  allDay: Boolean,
+  url: String,
+  team: String,
+  notes: String,
+  type: String
 });
 
 module.exports = mongoose.model('Event', EventSchema);
