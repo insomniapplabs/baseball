@@ -1,0 +1,9 @@
+.secondary-banner-container {
+  background-image:url('/assets/images/skeeterWM.png');
+  background-position:right;
+  background-color:#095eaa;
+  background-repeat:no-repeat;
+}
+.secondary-top {
+  padding:100px 0 30px 0;
+}

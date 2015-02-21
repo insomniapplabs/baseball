@@ -202,8 +202,8 @@ fieldset[disabled] .btn-default.active {
   padding:220px 0 50px 0;
 }
 .home-header { font-size:4.0em; }
-.home-main { padding:50px 0 70px 0; }
-.home-sponsor { padding:60px 0 70px 0;background:#222; }
+.home-main { padding:70px 0 90px 0; }
+.home-sponsor { padding:70px 0 90px 0;background:#222; }
 
 .subheading { margin-bottom:25px; }
 .subhead-sm { margin-bottom:0;font-size:1.1em;color:#999; }
