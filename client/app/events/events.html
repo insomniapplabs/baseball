@@ -32,19 +32,42 @@
       </div>
     </div>
     <!-- LIST VIEW -->
-    <div class="row">
-      <div class="col-md-12">
-        <div class="row">
-          <div class="col-md-4">
-            <select class="form-control">
-              <option value="">-- Filter Events by Team --</option>
-            </select>
+    <div ng-show="radioModel === 'List'">
+      <div class="row">
+        <div class="col-md-4">
+          <select class="form-control">
+            <option value="">-- Filter Events by Team --</option>
+          </select>
+        </div>
+      </div> <!-- ROW CLOSE -->
+
+      <div class="row">
+        <div class="col-md-5">
+          <h2 class="montbold events-header">Practices</h2>
+          <div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="event-item">
+                  <h4 class="montregular event-date">Feb 25 - 9U Practice</h4>
+                  <p class="montlight event-detail">Location: Bethesda 5 | Time: 5:00p - 7:00p
+                </div>
+                <div class="event-item">
+                  <h4 class="montregular event-date">Feb 25 - 9U Practice</h4>
+                  <p class="montlight event-detail">Location: Bethesda 5 | Time: 5:00p - 7:00p
+                </div>
+                <div class="event-item">
+                  <h4 class="montregular event-date">Feb 25 - 9U Practice</h4>
+                  <p class="montlight event-detail">Location: Bethesda 5 | Time: 5:00p - 7:00p
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div ng-show="radioModel === 'List'">
-          <h2 class="montbold">List View</h2>
+        <div class="col-md-offset-1 col-md-5">
+          <h2 class="montbold events-header">Games & Tournaments</h2>
         </div>
       </div>
+
     </div>
   </div>
 </div>

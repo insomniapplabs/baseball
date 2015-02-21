@@ -1,3 +1,20 @@
 .toggle-view-btns {
   margin-bottom:20px;
 }
+.events-header {
+	border-bottom:2px solid #ddd;
+}
+.box {
+	background-color:#095eaa;
+	padding:7px 7px;
+	color:#fff;
+}
+.event-date {
+	margin:0;
+	padding:0;
+}
+.event-item {
+	margin-bottom:10px;
+	padding:5px 0;
+	border-bottom:1px solid #ddd;
+}
