@@ -21,3 +21,13 @@
 .grey {
 	color:#888;
 }
+.blue-hi {
+	color:#fff;
+	background-color:#b4a26d;
+	padding:2px 5px;
+	font-family:'montlight';
+}
+.red {
+	color:#e51937;
+	font-size:1.1em;
+}
