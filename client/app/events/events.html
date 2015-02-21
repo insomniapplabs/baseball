@@ -10,6 +10,19 @@
     </div>
   </div>
 </div>
-<div class="container">
-	<div ui-calendar ng-model="eventSources"></div>
+
+<div class="secondary-main">
+  <div class="container">
+    <div class="toggle-view-btns">
+      <div class="btn-group">
+        <label class="btn btn-default" ng-model="radioModel" btn-radio="'Left'" uncheckable>
+          <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>&nbsp;&nbsp;Calendar View
+        </label>
+        <label class="btn btn-default" ng-model="radioModel" btn-radio="'Middle'" uncheckable>
+          <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;&nbsp;List View
+        </label>
+      </div>
+    </div>
+  	<div ui-calendar ng-model="eventSources"></div>
+  </div>
 </div>

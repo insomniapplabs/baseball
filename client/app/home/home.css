@@ -116,7 +116,7 @@
   background-image: none;
   border: 1px solid transparent;
   border-radius: 0;
-  font-family:'montregular';
+  font-family:'montlight';
   text-transform:uppercase;
 }
 .btn:focus,
@@ -151,7 +151,7 @@ fieldset[disabled] .btn {
 .btn-default {
   color: #fff;
   background-color: #095eaa;
-  border-color: #095eaa;
+  border-color: #004694;
 }
 .btn-default:hover,
 .btn-default:focus,
@@ -159,8 +159,8 @@ fieldset[disabled] .btn {
 .btn-default.active,
 .open .dropdown-toggle.btn-default {
   color: #fff;
-  background-color: #0D57A7;
-  border-color: #0D57A7;
+  background-color: #004694;
+  border-color: #004694;
 }
 .btn-default:active,
 .btn-default.active,
