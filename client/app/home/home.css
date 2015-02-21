@@ -203,7 +203,7 @@ fieldset[disabled] .btn-default.active {
 }
 .home-header { font-size:4.0em; }
 .home-main { padding:50px 0 70px 0; }
-.home-sponsor { padding:60px 0;background:#222; }
+.home-sponsor { padding:60px 0 70px 0;background:#222; }
 
 .subheading { margin-bottom:25px; }
 .subhead-sm { margin-bottom:0;font-size:1.1em;color:#999; }
@@ -212,4 +212,4 @@ fieldset[disabled] .btn-default.active {
 
 .detail { font-size:1.2em;line-height:1.3;margin-bottom:20px; }
 
-.sponsor-img { margin-top:20px;margin-bottom:10px; }
+.sponsor-img { margin-top:30px; }
