@@ -13,16 +13,38 @@
 
 <div class="secondary-main">
   <div class="container">
-    <div class="toggle-view-btns">
-      <div class="btn-group">
-        <label class="btn btn-default" ng-model="radioModel" btn-radio="'Left'" uncheckable>
-          <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>&nbsp;&nbsp;Calendar View
-        </label>
-        <label class="btn btn-default" ng-model="radioModel" btn-radio="'Middle'" uncheckable>
-          <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;&nbsp;List View
-        </label>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="toggle-view-btns">
+          <div class="btn-group">
+            <label class="btn btn-default" ng-model="radioModel" btn-radio="'Calendar'" uncheckable><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>&nbsp;&nbsp;Calendar View</label>
+            <label class="btn btn-default" ng-model="radioModel" btn-radio="'List'" uncheckable><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;&nbsp;List View</label>
+          </div>
+        </div>
       </div>
     </div>
-  	<div ui-calendar ng-model="eventSources"></div>
+    <!-- CALENDAR VIEW -->
+    <div class="row">
+      <div class="col-md-12">
+        <div ng-show="radioModel === 'Calendar'">
+          <div ui-calendar ng-model="eventSources"></div>
+        </div>
+      </div>
+    </div>
+    <!-- LIST VIEW -->
+    <div class="row">
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-4">
+            <select class="form-control">
+              <option value="">-- Filter Events by Team --</option>
+            </select>
+          </div>
+        </div>
+        <div ng-show="radioModel === 'List'">
+          <h2 class="montbold">List View</h2>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

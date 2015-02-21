@@ -13,6 +13,7 @@ angular.module('baseballApp')
 
     $scope.eventSources = [$scope.events, $scope.eventSource];
 
-
+    $scope.radioModel = 'Calendar';
+    
 
   });
