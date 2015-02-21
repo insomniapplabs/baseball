@@ -7,3 +7,22 @@
 .secondary-top {
   padding:100px 0 30px 0;
 }
+.secondary-main {
+  padding-top:40px;
+}
+.update-title {
+  font-size:3.0em;
+  margin-bottom:0;
+}
+.update-detail {
+  margin-top:0;
+  margin-bottom:25px;
+}
+.update-text {
+  font-size:1.2em;
+}
+.update-container {
+  padding-bottom:30px;
+  padding-top:10px;
+  border-bottom:1px solid #ddd;
+}
