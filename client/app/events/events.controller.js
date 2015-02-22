@@ -21,6 +21,12 @@ angular.module('baseballApp')
       $scope.events = events;
     });
 
+    $scope.teams = [];
+
+    $http.get('api/teams').success(function(teams) {
+    	$scope.teams = teams;
+    });
+
     $scope.eventSource = {url: '/api/events'};
 
     $scope.eventSources = [$scope.events, $scope.eventSource];

@@ -37,6 +37,7 @@
         <div class="col-md-4">
           <select class="form-control">
             <option value="">-- Filter Events by Team --</option>
+            <option ng-value="team.age" ng-repeat="team in teams">{{team.age}}</option>
           </select>
         </div>
       </div> <!-- ROW CLOSE -->
@@ -63,6 +64,9 @@
                 <div class="event-item">
                   <h4 class="montbold event-date"><span class="red">Mar 1 - Mar 3</span> - Spring Slam</h4>
                   <p class="montlight event-detail"><span class="grey">Location:</span> <span class="blue montregular">Fly Park, Franklin, TN</span> | <span class="grey">Team:</span> <span class="blue montregular">9U</span> | View&nbsp;Details</p>
+                  <!--<div class="view-details-container">
+                    <p class="montlight">These are some details to this events that should remain hidden until the view details button is hit.</p>
+                  </div>-->
                 </div>
                 
               </div>
