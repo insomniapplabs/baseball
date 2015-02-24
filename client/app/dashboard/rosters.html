@@ -1,19 +1,13 @@
-<div ng-include="'components/navbar/dashboardnavbar.html'"></div>
-
-<div class="dash-header">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <h2>Rosters</h2>
-      </div>
-    </div>
-  </div>
+<div class="dashboard-nav-container">
+  <div ng-include="'components/navbar/dashboardnavbar.html'"></div>
 </div>
+
 
 <div class="dash-main">
   <div class="container">
     <div class="row">
       <div class="col-md-8">
+      	<h2 class="montbold blue manage-roster-header">Manage Rosters</h2>
         <div class="row">
           <div class="col-md-4">
             <div class="selector">
@@ -24,6 +18,9 @@
             </div>
           </div>
         </div>
+
+
+
         <table class="table table-condensed">
 						<thead>
 							<tr>
@@ -40,35 +37,37 @@
 								<td>{{player.lastName}}</td>
 								<td>{{player.number}}</td>
 								<td>{{player.teamAge}}</td>
-								<td><button type="button" class="close" ng-click="deletePlayer(player)">&times;</button></td>
+								<td><button type="button" class="close" ng-click="deletePlayer(player)"><span class="montbold">&times;</span></button></td>
 							</tr>
 						</tbody>
 					</table>
       </div>
-      <div class="col-md-offset-1 col-md-3">
-        <h3>Add Players</h3>
-
+      <div class="col-md-4">
+      	<div class="add-player-container">
+        	<h3 class="add-player-header montbold">Add Players</h3>
 							<form>
 								<div class="form-group">
 									<label class="sr-only">First Name</label>
-									<input type="text" placeholder="First Name" class="form-control" 	ng-model="newPlayerFirstName" required />
+									<input type="text" placeholder="First Name" class="form-control no-radius-input" 	ng-model="newPlayerFirstName" />
 								</div>
 								<div class="form-group">
 									<label class="sr-only">Last Name</label>
-									<input type="text" placeholder="Last Name" class="form-control" 	ng-model="newPlayerLastName" required />
+									<input type="text" placeholder="Last Name" class="form-control no-radius-input" 	ng-model="newPlayerLastName" />
 								</div>
 								<div class="form-group">
 									<label class="sr-only">Number</label>
-									<input type="text" placeholder="Jersey Number" class="form-control" ng-model="newPlayerNumber" required />
+									<input type="text" placeholder="Jersey Number" class="form-control no-radius-input" ng-model="newPlayerNumber" />
 								</div>
 								<div class="form-group">
-									<select ng-model="newPlayerTeam" class="form-control" required>
+									<select ng-model="newPlayerTeam" class="form-control no-radius-select">
 										<option value="">-- choose team --</option>
-										<option ng-value="team.age" ng-repeat="team in teams">{{team.	age}}</option>
+										<option ng-value="team.age" ng-repeat="team in teams">{{team.age}}</option>
 									</select>
 								</div>
-								<button class="btn btn-default" ng-click="addPlayer()">Add Player</button>
+								<button class="btn btn-default btn-sm" ng-click="addPlayer()">Add Player</button>
+								<button class="btn btn-reset btn-sm pull-right" ng-click="resetForm()">Reset</button>
 							</form>
+				</div>
       </div>
     </div>
   </div>

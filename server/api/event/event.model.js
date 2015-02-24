@@ -8,6 +8,7 @@ var EventSchema = new Schema({
   description: String,
   location: String,
   start: Date,
+  time: String,
   end: Date,
   allDay: Boolean,
   url: String,

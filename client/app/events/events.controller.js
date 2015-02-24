@@ -29,7 +29,7 @@ angular.module('baseballApp')
 
     $scope.eventSource = {url: '/api/events'};
 
-    $scope.eventSources = [$scope.events, $scope.eventSource];
+    $scope.eventSources = [$scope.eventSource];
 
     $scope.radioModel = 'Calendar';
     

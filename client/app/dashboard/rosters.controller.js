@@ -34,5 +34,12 @@ angular.module('baseballApp')
       socket.unsyncUpdates('player');
     });
 
+    $scope.resetForm = function() {
+      $scope.newPlayerFirstName = '';
+      $scope.newPlayerLastName = '';
+      $scope.newPlayerNumber = '';
+      $scope.newPlayerTeam = '';
+    };
+
 
   });

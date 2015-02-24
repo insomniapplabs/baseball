@@ -1,23 +1,131 @@
-<div ng-include="'components/navbar/dashboardnavbar.html'"></div>
-
-<div class="dash-header">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <h2>Events</h2>
-      </div>
-    </div>
-  </div>
+<div class="dashboard-nav-container">
+  <div ng-include="'components/navbar/dashboardnavbar.html'"></div>
 </div>
 
-<div class="class-main">
+<div class="dash-main">
   <div class="container">
     <div class="row">
       <div class="col-md-8">
-        <h3>Upcoming Events</h3>
-      </div>
-      <div class="col-md-offset-1 col-md-3">
+        <h2 class="montbold blue manage-roster-header">Manage Events</h2>
 
+        <div class="row">
+          <div class="col-md-4">
+            <div class="selector">
+              <select class="form-control" ng-model="selectedType">
+                <option value="">-- all event types --</option>
+                <option value="game">Game</option>
+                <option value="practice">Practice</option>
+                <option value="scrimmage">Scrimmage</option>
+                <option value="tournament">Tournament</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="selector">
+              <select class="form-control" ng-model="selectedTeam">
+                <option value="">-- all teams --</option>
+                <option ng-value="team.age" ng-repeat="team in teams">{{team.age}}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!--
+        <div class="event-listing" ng-repeat="event in events | filter:selectedType | filter:selectedTeam | orderBy:'start'">
+          <p>{{event.start | date: 'EEEE, MMMM d'}} - {{event.title}} | Team: {{event.team}} | Type: {{event.type}} | View Details <button type="button" class="close" ng-click="deleteEvent(event)"><span class="montbold">&times;</span></button></p>
+        </div>
+        -->
+
+
+        <table class="table table-condensed">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Title</th>
+                <th>Team</th>
+                <th>Type</th>
+                <th>Time</th>
+                <th>View</th>
+                <th>&nbsp;</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="event in events | filter:selectedType | filter:selectedTeam | orderBy:'start'">
+                <td>{{event.start | date: 'EEEE, MMMM d'}}</td>
+                <td>{{event.title}}</td>
+                <td>{{event.team}}</td>
+                <td>{{event.type}}</td>
+                <td>{{event.time}}</td>
+                <td>View Detail</td>
+                <td><button type="button" class="close" ng-click="deleteEvent(event)"><span class="montbold">&times;</span></button></td>
+              </tr>
+            </tbody>
+          </table>
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="col-md-4">
+        <div class="add-player-container">
+          <h3 class="add-player-header montbold">Add Event</h3>
+          <form>
+            <div class="form-group">
+              <label class="sr-only">Event Title</label>
+              <input type="text" ng-model="newEventTitle" class="form-control" placeholder="Event Title" />
+            </div>
+            <div class="form-group">
+              <label class="sr-only">Event Description</label>
+              <textarea type="text" ng-model="newEventDescription" class="form-control" placeholder="Event Description"></textarea>
+            </div>
+            <div class="form-group">
+              <label class="sr-only">Location</label>
+              <input type="text" ng-model="newEventLocation" class="form-control" placeholder="Location" />
+            </div>
+            <div class="form-group">
+              <label class="sr-only">Time</label>
+              <input type="text" ng-model="newEventTime" class="form-control" placeholder="Time" />
+            </div>
+            <div class="form-group">
+              <label class="sr-only">Start Date</label>
+              <input type="text" ng-model="newEventStart" class="form-control" placeholder="Start dd/mm/yyyy" />
+            </div>
+            <div class="form-group">
+              <label class="sr-only">End Date</label>
+              <input type="text" ng-model="newEventEnd" class="form-control" placeholder="End dd/mm/yyyy" />
+            </div>
+            <div class="form-group">
+              <label class="sr-only">Event Url</label>
+              <input type="text" ng-model="newEventUrl" class="form-control" placeholder="Event Url: http://example.com" />
+            </div>
+            <div class="form-group">
+              <select ng-model="newEventTeam" class="form-control no-radiuselect">
+                <option value="">-- choose team --</option>
+                <option ng-value="team.age" ng-repeat="team in teams">{{team.age}}</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <select ng-model="newEventType" class="form-control no-radius-select">
+                <option value="">-- choose event type --</option>
+                <option value="Game">Game</option>
+                <option value="Practice">Practice</option>
+                <option value="Scrimmage">Scrimmage</option>
+                <option value="Tournament">Tournament</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="sr-only">Notes</label>
+              <textarea type="text" ng-model="newEventNote" class="form-control" placeholder="Notes"></textarea>
+            </div>
+            <button class="btn btn-default btn-sm" ng-click="addEvent()">Add Event</button>
+            <button class="btn btn-reset btn-sm pull-right" ng-click="resetEventForm()">Reset</button>
+          </form>
+        </div>
       </div>
     </div>
   </div>

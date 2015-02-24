@@ -7,20 +7,22 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="/" class="navbar-brand">baseball</a>
+      <a href="/dashboard/home" class="navbar-brand2">Dashboard</a>
     </div>
     <div collapse="isCollapsed" class="navbar-collapse collapse" id="navbar-main">
       <ul class="nav navbar-nav">
-        <li ng-repeat="item in menu" ng-class="{active: isActive(item.link)}">
+        <li><a ui-sref="dashboard.home">Home</a></li>
+        <li><a ui-sref="dashboard.events">Calendars</a></li>
+        <li><a ui-sref="dashboard.rosters">Rosters</a></li>
+        <li><a ui-sref="dashboard.updates">Updates</a></li>
+        <li><a ui-sref="home">View Site</a></li>
+        <!--<li ng-repeat="item in menu" ng-class="{active: isActive(item.link)}">
             <a ng-href="{{item.link}}">{{item.title}}</a>
         </li>
-        <li ng-show="isAdmin()" ng-class="{active: isActive('/admin')}"><a href="/admin">Admin</a></li>
+        <li ng-show="isAdmin()" ng-class="{active: isActive('/admin')}"><a href="/admin">Admin</a></li>-->
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="/dashboard/home">Home</a></li>
-        <li><a href="/dashboard/events">Events</a></li>
-        <li><a href="/dashboard/rosters">Rosters</a></li>
         <!--<li ng-hide="isLoggedIn()" ng-class="{active: isActive('/signup')}"><a href="/signup">Sign up</a></li>
         <li ng-hide="isLoggedIn()" ng-class="{active: isActive('/login')}"><a href="/login">Login</a></li>
         <li ng-show="isLoggedIn()"><p class="navbar-text">Hello {{ getCurrentUser().name }}</p> </li>

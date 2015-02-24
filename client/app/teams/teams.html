@@ -16,7 +16,7 @@
     <div class="row">
       <div class="col-md-12">
         <tabset justified="true">
-          <tab heading="8U Skeeters">
+          <tab heading="{{team.age}} Skeeters" ng-repeat="team in teams">
             <div class="team-pg">
               <div class="row">
                 <div class="col-md-6">
@@ -25,20 +25,12 @@
                   <p class="montlight">John Smith - Asst. Coach</p>
                   <p class="montlight">Larry Bold - Asst. Coach</p>
                   <h3 class="montbold">Roster</h3>
-                  <div class="row">
+                  <div class="row" ng-repeat="player in players" ng-if="player.teamAge === team.age">
                     <div class="col-md-1">
-                      <p class="montlight">#7</p>
+                      <p class="montlight player-text">#{{player.number}}</p>
                     </div>
                     <div class="col-md-11">
-                      <p class="montlight">Avery Johnson</p>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-1">
-                      <p class="montlight">#26</p>
-                    </div>
-                    <div class="col-md-11">
-                      <p class="montlight">Drew Lamb</p>
+                      <p class="montlight player-text">{{player.firstName}} {{player.lastName}}</p>
                     </div>
                   </div>
                   
@@ -49,7 +41,7 @@
               </div>
             </div>
           </tab>
-          <tab heading="9U Skeeters">
+          <!--<tab heading="9U Skeeters">
             <div class="team-pg">
               <div class="row">
                 <div class="col-md-6">
@@ -114,7 +106,7 @@
                 </div>
               </div>
             </div>
-          </tab>
+          </tab> -->
         </tabset>
       </div>
     </div>

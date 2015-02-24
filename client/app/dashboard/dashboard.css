@@ -12,5 +12,53 @@
   padding-top:30px;
 }
 .selector {
-  padding-bottom:10px;
+  padding-bottom:15px;
 }
+.dashboard-nav-container {
+	background:#222;
+	padding:10px 0;
+}
+.navbar-default .navbar-brand2 {
+  color: #fff;
+}
+.navbar-brand2 {
+  float: left;
+  height: 50px;
+  padding: 15px 15px;
+  font-size: 24px;
+  line-height: 20px;
+  font-family:'montbold';
+}
+.navbar-brand2:hover,
+.navbar-brand2:focus {
+  text-decoration: none;
+}
+
+input.no-radius-input { border-radius:4px; }
+select.no-radius-select { border-radius:0; }
+
+.add-player-container {
+  padding:0 0 30px 30px;
+  border-left:1px solid #e3e3e3;
+}
+.add-player-header {
+  margin:0 0 10px 0;
+}
+
+.table th { 
+  font-family:'montbold';
+  font-size:0.95em;
+}
+.table td {
+  font-family:'montlight';
+  font-size:0.9em;
+}
+
+.manage-roster-header {
+  margin-top:0;
+  margin-bottom:15px;
+}
+.event-listing {
+  border-bottom:1px solid #eee;
+}
+

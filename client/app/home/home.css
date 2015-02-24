@@ -192,6 +192,62 @@ fieldset[disabled] .btn-default.active {
 
 
 
+
+.btn-reset {
+  color: #777;
+  background-color: #ccc;
+  border-color: #bbb;
+}
+.btn-reset:hover,
+.btn-reset:focus,
+.btn-reset:active,
+.btn-reset.active,
+.open .dropdown-toggle.btn-reset {
+  color: #777;
+  background-color: #bbb;
+  border-color: #bbb;
+}
+.btn-reset:active,
+.btn-reset.active,
+.open .dropdown-toggle.btn-reset {
+  background-image: none;
+}
+.btn-reset.disabled,
+.btn-reset[disabled],
+fieldset[disabled] .btn-reset,
+.btn-reset.disabled:hover,
+.btn-reset[disabled]:hover,
+fieldset[disabled] .btn-reset:hover,
+.btn-reset.disabled:focus,
+.btn-reset[disabled]:focus,
+fieldset[disabled] .btn-reset:focus,
+.btn-reset.disabled:active,
+.btn-reset[disabled]:active,
+fieldset[disabled] .btn-reset:active,
+.btn-reset.disabled.active,
+.btn-reset[disabled].active,
+fieldset[disabled] .btn-reset.active {
+  background-color: #fff;
+  border-color: #ccc;
+}
+.btn-reset .badge {
+  color: #fff;
+  background-color: #333;
+}
+
+
+
+
+
+.btn-sm,
+.btn-group-sm > .btn {
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 0;
+}
+
+
 .banner-container {
   background-image:url('/assets/images/skeeterWM.png');
   background-position:right;

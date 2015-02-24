@@ -18,9 +18,14 @@ angular.module('baseballApp')
         templateUrl: 'app/dashboard/rosters.html',
         controller: 'RostersCtrl'
       })
+      .state('dashboard.updates', {
+        url: '/updates',
+        templateUrl: 'app/dashboard/updates.html',
+        controller: 'UpdatesCtrl'
+      })
       .state('dashboard.events', {
         url: '/events',
         templateUrl: 'app/dashboard/events.html',
-        controller: 'EventsCtrl'
+        controller: 'EventsController'
       });
   });

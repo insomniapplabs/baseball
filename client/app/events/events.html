@@ -35,7 +35,7 @@
     <div ng-show="radioModel === 'List'">
       <div class="row">
         <div class="col-md-4">
-          <select class="form-control">
+          <select class="form-control" ng-model="selectedTeam">
             <option value="">-- Filter Events by Team --</option>
             <option ng-value="team.age" ng-repeat="team in teams">{{team.age}}</option>
           </select>
@@ -48,9 +48,9 @@
           <div>
             <div class="row">
               <div class="col-md-12">
-                <div class="event-item">
-                  <h4 class="montbold event-date"><span class="red">Feb 25</span> - 9U Practice</h4>
-                  <p class="montlight event-detail"><span class="grey">Location:</span> <span class="blue montregular">Bethesda 5</span> | <span class="grey">Time:</span> <span class="blue montregular">5:00p - 7:00p</span> | View&nbsp;Details</p>
+                <div class="event-item" ng-repeat="event in events | orderBy:'start' | filter:selectedTeam" ng-if="event.type === 'Practice' || event.type === 'Scrimmage'">
+                  <h4 class="montbold event-date"><span class="red">{{event.start | date:'MMMM d'}}</span> - {{event.title}}</h4>
+                  <p class="montlight event-detail"><span class="grey">Location:</span> <span class="blue montregular">{{event.location}}</span> | <span class="grey">Time:</span> <span class="blue montregular">{{event.time}}</span> | View&nbsp;Details</p>
                 </div>
                 
               </div>
@@ -61,12 +61,9 @@
           <h2 class="montbold events-header">Games & Tournaments</h2>
           <div class="row">
               <div class="col-md-12">
-                <div class="event-item">
-                  <h4 class="montbold event-date"><span class="red">Mar 1 - Mar 3</span> - Spring Slam</h4>
-                  <p class="montlight event-detail"><span class="grey">Location:</span> <span class="blue montregular">Fly Park, Franklin, TN</span> | <span class="grey">Team:</span> <span class="blue montregular">9U</span> | View&nbsp;Details</p>
-                  <!--<div class="view-details-container">
-                    <p class="montlight">These are some details to this events that should remain hidden until the view details button is hit.</p>
-                  </div>-->
+                <div class="event-item" ng-repeat="event in events | orderBy:'start' | filter:selectedTeam" ng-if="event.type === 'Game' || event.type === 'Tournament'">
+                  <h4 class="montbold event-date"><span class="red">{{event.start | date:'MMMM d'}}</span> - {{event.title}}</h4>
+                  <p class="montlight event-detail"><span class="grey">Location:</span> <span class="blue montregular">{{event.location}}</span> | <span class="grey">Time:</span> <span class="blue montregular">{{event.time}}</span> | View&nbsp;Details</p>
                 </div>
                 
               </div>
