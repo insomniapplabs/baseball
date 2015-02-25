@@ -30,6 +30,8 @@
           </div>
         </div>
 
+
+
         <!--
         <div class="event-listing" ng-repeat="event in events | filter:selectedType | filter:selectedTeam | orderBy:'start'">
           <p>{{event.start | date: 'EEEE, MMMM d'}} - {{event.title}} | Team: {{event.team}} | Type: {{event.type}} | View Details <button type="button" class="close" ng-click="deleteEvent(event)"><span class="montbold">&times;</span></button></p>
@@ -55,7 +57,7 @@
                 <td>{{event.title}}</td>
                 <td>{{event.team}}</td>
                 <td>{{event.type}}</td>
-                <td>{{event.time}}</td>
+                <td>{{event.className}}</td>
                 <td>View Detail</td>
                 <td><button type="button" class="close" ng-click="deleteEvent(event)"><span class="montbold">&times;</span></button></td>
               </tr>

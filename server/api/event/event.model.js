@@ -14,7 +14,8 @@ var EventSchema = new Schema({
   url: String,
   team: String,
   notes: String,
-  type: String
+  type: String,
+  className: String
 });
 
 module.exports = mongoose.model('Event', EventSchema);

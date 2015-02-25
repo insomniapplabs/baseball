@@ -34,3 +34,19 @@
 	font-size:1.1em;
 	text-decoration: underline;
 }
+.Skeeter9U {
+	background:#095eaa;
+	border-color:#095eaa;
+}
+.Skeeter8U {
+	background:#222;
+	border-color:#222;
+}
+.Skeeter10U {
+	background:#B5A167;
+	border-color:#B5A167;
+}
+
+.black-event { color:#fff;background:#222;padding:4px; }
+.gold-event { background:#B5A167;color:#fff;padding:4px; }
+.blue-event { background:#095eaa;color:#fff;padding:4px; }

@@ -24,16 +24,17 @@ angular.module('baseballApp')
 
     $scope.addEvent = function() {
     	$http.post('/api/events', {
-				title: $scope.newEventTitle,
-				description: $scope.newEventDescription,
-				location: $scope.newEventLocation,
-				start: $scope.newEventStart,
-				end: $scope.newEventEnd,
-				url: $scope.newEventUrl,
-				team: $scope.newEventTeam,
-				type: $scope.newEventType,
-				notes: $scope.newEventNote,
-				time: $scope.newEventTime    		
+		  title: $scope.newEventTitle,
+		  description: $scope.newEventDescription,
+		  location: $scope.newEventLocation,
+		  start: $scope.newEventStart,
+		  end: $scope.newEventEnd,
+		  url: $scope.newEventUrl,
+		  team: $scope.newEventTeam,
+		  type: $scope.newEventType,
+		  notes: $scope.newEventNote,
+		  time: $scope.newEventTime,
+          className: 'Skeeter' + $scope.newEventTeam   		
     	});
     	$scope.newEventTitle = '';
     	$scope.newEventDescription = '';
