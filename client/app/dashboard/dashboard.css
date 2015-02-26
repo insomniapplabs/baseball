@@ -62,3 +62,17 @@ select.no-radius-select { border-radius:0; }
   border-bottom:1px solid #eee;
 }
 
+.markdown-text-container p { font-family:'montlight'; }
+.markdown-text-container h1,h2,h3,h4,h5 { font-family:'montbold'; }
+.update-header { margin-top:0;margin-bottom:0; }
+.update-listing {border-top:3px solid #eee;margin-top:20px; }
+.post-list-title { margin-bottom:0;margin-top:0; }
+.post-list-detail-mid { margin-top:0;margin-bottom:0; }
+.post-list-detail-btm { margin-top:0;margin-bottom:0; }
+.update-each { padding:15px 0;border-bottom:1px solid #eee; }
+.draft { color:red;font-family:'montbold';text-transform:uppercase; }
+.posted { color:#222;font-family:'montbold';text-transform:uppercase; }
+.post-list-border { padding:15px 0 5px 0;border-bottom:1px solid #eee;padding-bottom:10px; }
+.post-list-border-text { margin:0;text-transform:uppercase;color:#999; }
+.update-lister { }
+.preview-container { padding:10px 20px; }

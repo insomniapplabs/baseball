@@ -7,7 +7,8 @@ angular.module('baseballApp', [
   'btford.socket-io',
   'ui.router',
   'ui.bootstrap',
-  'ui.calendar'
+  'ui.calendar',
+  'hc.marked'
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
     $urlRouterProvider

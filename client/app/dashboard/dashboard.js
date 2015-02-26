@@ -21,7 +21,12 @@ angular.module('baseballApp')
       .state('dashboard.updates', {
         url: '/updates',
         templateUrl: 'app/dashboard/updates.html',
-        controller: 'UpdatesCtrl'
+        controller: 'UpdatesController'
+      })
+      .state('dashboard.newUpdate', {
+        url: '/updates/new',
+        templateUrl: 'app/dashboard/new-update.html',
+        controller: 'UpdatesController'
       })
       .state('dashboard.events', {
         url: '/events',

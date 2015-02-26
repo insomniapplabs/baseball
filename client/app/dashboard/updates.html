@@ -2,3 +2,69 @@
   <div ng-include="'components/navbar/dashboardnavbar.html'"></div>
 </div>
 
+<!-- textAngular SAMPLE CODE -->
+
+<!--<div class="container">
+	<div class="row">
+		<div class="col-md-8">
+			<text-angular ng-model="text">
+			</text-angular>
+		</div>
+		<div class="col-md-offset-1 col-md-3">
+			<div ta-bind ng-model="text"></div>
+		</div>
+	</div>
+</div>-->
+
+
+
+<div class="dash-main">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8">
+				<h2 class="montbold update-header">Updates</h2>
+			</div>
+			<div class="col-md-4">
+				<a ui-sref="dashboard.newUpdate" class="btn btn-default pull-right">Create Update</a>
+			</div>
+		</div>
+		<div class="update-listing">
+			<div class="row">
+				<div class="col-md-5">
+					<div class="post-list-border">
+						<h5 class="montbold post-list-border-text">Updates List</h5>
+					</div>
+
+					<div class="update-lister">
+					<div ng-repeat="update in updates" class="update-each" ng-click="makeSelected(update)">
+						<h3 class="post-list-title montbold">
+							{{update.title}}
+							<button type="button" class="close" ng-click="deleteUpdate(update)"><span class="montbold">&times;</span></button>
+						</h3>
+						<p class="post-list-detail-mid montlight">Posted by {{update.author}} on {{update.date}}</p>
+						<p class="post-list-detail-btm draft" ng-show="update.draft === true">Draft</p>
+						<p class="post-list-detail-btm posted" ng-show="update.draft === false">
+							Published
+							<!--<button type="button" class="close" ng-click="deleteUpdate(update)"><span class="montbold">&times;</span></button>-->
+						</p>
+					</div>
+					</div>
+
+
+				</div>
+				<div class="col-md-7">
+					<div class="post-list-border">
+						<h5 class="montbold post-list-border-text">Preview</h5>
+					</div>
+					<div class="preview-container">
+						<h1 class="montbold">{{selectedUpdate.title}}</h1>
+						<div marked="selectedUpdate.text" class="markdown-text-container"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+	</div>
+</div>

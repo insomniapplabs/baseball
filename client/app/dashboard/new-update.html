@@ -1,0 +1,63 @@
+<div class="dashboard-nav-container">
+  <div ng-include="'components/navbar/dashboardnavbar.html'"></div>
+</div>
+
+<!-- textAngular SAMPLE CODE -->
+
+<!--<div class="container">
+	<div class="row">
+		<div class="col-md-8">
+			<text-angular ng-model="text">
+			</text-angular>
+		</div>
+		<div class="col-md-offset-1 col-md-3">
+			<div ta-bind ng-model="text"></div>
+		</div>
+	</div>
+</div>-->
+
+
+
+<div class="dash-main">
+	<div class="container">
+	<div class="row">
+		<div class="col-md-6">
+			<h2 class="montbold">Add Post</h2>
+			<form>
+				<div class="form-group">
+					<label>Title</label>
+					<input class="form-control" ng-model="newUpdateTitle" />
+				</div>
+				<div class="form-group">
+					<label>Date</label>
+					<input class="form-control" ng-model="newUpdateDate" />
+				</div>
+				<div class="form-group">
+					<label>Author</label>
+					<input class="form-control" ng-model="newUpdateAuthor" />
+				</div>
+				<div class="form-group">
+					<select class="form-control">
+						<option value="">-- Select Team --</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label>Text</label>
+					<textarea marked class="form-control" ng-model="newUpdateText" rows="10"></textarea>
+				</div>
+				<button class="btn btn-default" ng-click="addUpdate()">Publish</button>
+				<button class="btn btn-reset" ng-click="addDraft()">Save as Draft</button>
+				<button class="btn btn-reset pull-right" ng-click="cancel()">Cancel</button>
+			</form>
+			
+		</div>
+		<div class="col-md-offset-1 col-md-5">
+			<div class="preview-post">
+				<h2 class="montbold">Preview Post</h2>
+				<h3 class="montlight">{{newUpdateTitle}}</h3>
+				<div marked="newUpdateText" class="markdown-text-container"></div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>

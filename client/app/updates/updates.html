@@ -22,21 +22,14 @@
             </select>
           </div>
         </div>
-        <div class="update-container">
-          <h2 class="montbold update-title">Update Title</h2>
-          <p class="montlight update-detail">Posted by Aaron Johnson on February 20</p>
-          <p class="montlight update-text">Lorem ipsum dolor sit amet, vel ad debitis forensibus comprehensam. Pro cibo audire invidunt eu, id pro alii solum theophrastus, altera volutpat mel ne. Rebum dicit oporteat duo eu. Verear mandamus vix ne. Vide scripserit vim eu, te per liber impedit cotidieque.</p>
-          <p class="montlight update-text">Lorem ipsum dolor sit amet, vel ad debitis forensibus comprehensam. Pro cibo audire invidunt eu, id pro alii solum theophrastus, altera volutpat mel ne. Rebum dicit oporteat duo eu. Verear mandamus vix ne. Vide scripserit vim eu, te per liber impedit cotidieque.</p>
-        </div>
-        <div class="update-container">
-          <h2 class="montbold update-title">Update Title Two</h2>
-          <p class="montlight update-detail">Posted by Aaron Johnson on February 20</p>
-          <p class="montlight update-text">Lorem ipsum dolor sit amet, vel ad debitis forensibus comprehensam. Pro cibo audire invidunt eu, id pro alii solum theophrastus, altera volutpat mel ne. Rebum dicit oporteat duo eu. Verear mandamus vix ne. Vide scripserit vim eu, te per liber impedit cotidieque.</p>
-          <p class="montlight update-text">Lorem ipsum dolor sit amet, vel ad debitis forensibus comprehensam. Pro cibo audire invidunt eu, id pro alii solum theophrastus, altera volutpat mel ne. Rebum dicit oporteat duo eu. Verear mandamus vix ne. Vide scripserit vim eu, te per liber impedit cotidieque.</p>
+        <div class="update-container" ng-repeat="update in updates">
+          <h2 class="montbold update-title">{{update.title}}</h2>
+          <p class="montlight update-detail">Posted by {{update.author}} on {{update.date}}</p>
+          <div marked="update.text" class="markdown-text-container"></div>
         </div>
       </div>
       <div class="col-md-offset-1 col-md-3">
-        <h3 class="montbold">Older Updates</h3>
+        
       </div>
     </div>
   </div>
