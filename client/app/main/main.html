@@ -1,4 +1,100 @@
-<div ng-include="'components/navbar/navbar.html'"></div>
+<div class="banner-container">
+  <div ng-include="'components/navbar/navbar.html'"></div>
+  <div class="home-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="montbold white home-header">Skeeters Baseball Club</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="home-main">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h2 class="montbold">About</h2>
+        <p class="montlight about-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+      </div>
+      <div class="col-md-offset-1 col-md-5">
+        <h2 class="montbold">Upcoming Schedule</h2>
+        <div ng-repeat="event in events" class="main-event-container">
+          <p class="montregular main-event-title">{{event.title}}</p>
+          <p class="montlight main-event-detail">
+            Location: {{event.location}} |
+            Time: {{event.time}}
+          </p>
+        </div>
+        <a href="/events" class="btn btn-default button-padtop">View More</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="home-sponsor">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <!--<p class="text-center montlight subhead-sm">Supported by</p>-->
+        <h3 class="text-center montlight subhead-lg-w">Our Sponsors</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <img src="/assets/images/bridgemore_300.png" width="100%" class="sponsor-img" />
+      </div>
+      <div class="col-md-3">
+        <img src="/assets/images/kemp_300.png" width="100%" class="sponsor-img" />
+      </div>
+      <div class="col-md-3">
+        <img src="/assets/images/farm_credit_300.png" width="100%" class="sponsor-img" />
+      </div>
+      <div class="col-md-3">
+        <img src="/assets/images/all_pest_300.png" width="100%" class="sponsor-img" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3">
+        <img src="/assets/images/mjfrick_300.png" width="100%" class="sponsor-img" />
+      </div>
+      <div class="col-md-3">
+        <img src="/assets/images/avcare_300.png" width="100%" class="sponsor-img" />
+      </div>
+      <div class="col-md-3">
+        <img src="/assets/images/suntrust_300.png" width="100%" class="sponsor-img" />
+      </div>
+      <div class="col-md-3">
+        <img src="/assets/images/farmer_300.png" width="100%" class="sponsor-img" />
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="footer-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <p class="montlight">&copy; 2015 Skeeters Baseball Club</p>
+      </div>
+      <div class="col-md-6">
+        <p class="text-right montlight">
+          <a ui-sref="events">Calendar</a> |
+          <a ui-sref="teams">Teams</a> |
+          <a ui-sref="updates">Updates</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--<div ng-include="'components/navbar/navbar.html'"></div>
 
 <header class="hero-unit" id="banner">
   <div class="container">
@@ -35,4 +131,4 @@
         <a href="https://twitter.com/tyhenkel">@tyhenkel</a> |
          <a href="https://github.com/DaftMonk/generator-angular-fullstack/issues?state=open">Issues</a></p>
   </div>
-</footer>
+</footer>-->

@@ -28,3 +28,21 @@
     margin-top: 70px;
     border-top: 1px solid #E5E5E5;
 }
+.main-event-title {
+    font-size:1.4em;
+    margin:0;
+}
+.main-event-detail {
+    font-size:1.1em;
+    margin:0;
+}
+.about-text { 
+    font-size:1.1em;
+    margin:0;
+}
+.main-event-container {
+    margin-bottom:10px;
+}
+.button-padtop {
+    margin-top:10px;
+}
