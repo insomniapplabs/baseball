@@ -41,7 +41,7 @@
     margin:0;
 }
 .main-event-container {
-    margin-bottom:10px;
+    margin-bottom:15px;
 }
 .button-padtop {
     margin-top:10px;
@@ -52,4 +52,11 @@
 }
 .about-image {
     margin-bottom:20px;
+    border: 2px solid #eee;
+}
+.main-select {
+    margin-bottom:15px;
+}
+.gold {
+    color:#998A5B;
 }

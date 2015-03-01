@@ -23,13 +23,51 @@
       </div>
       <div class="col-md-offset-1 col-md-5 sub-container">
         <h2 class="montbold subhead">Upcoming Schedule</h2>
-        <div ng-repeat="event in events" class="main-event-container">
+        <div class="row main-select">
+          <div class="col-md-6">
+            <select class="form-control">
+              <option value="">-- sort by team --</option>
+              <option ng-value="team.age" ng-repeat="team in teams">{{team.age}}</option>
+            </select>
+          </div>
+        </div>
+        <!--<div ng-repeat="event in events" class="main-event-container">
           <p class="montlight main-event-title"><span class="blue">Feb 28</span> - {{event.title}}</p>
           <p class="montlight main-event-detail">
             <span class="grey">Location:</span> <span class="montbold">{{event.location}}</span> |
             <span class="grey">Time:</span> <span class="montbold">{{event.time}}</span>
           </p>
+        </div>-->
+        <div ng-repeat="event in events" class="main-event-container">
+          <p class="montlight main-event-title"><span class="blue">Feb 28</span> - 8U Practice</p>
+          <p class="montlight main-event-detail">
+            <span class="grey">Location:</span> <span class="montbold">Bethesda 5</span> |
+            <span class="grey">Time:</span> <span class="montbold">7:00p-9:00p</span>
+          </p>
         </div>
+        <div ng-repeat="event in events" class="main-event-container">
+          <p class="montlight main-event-title"><span class="blue">Feb 28</span> - 8U Practice</p>
+          <p class="montlight main-event-detail">
+            <span class="grey">Location:</span> <span class="montbold">Bethesda 5</span> |
+            <span class="grey">Time:</span> <span class="montbold">7:00p-9:00p</span>
+          </p>
+        </div>
+        <div ng-repeat="event in events" class="main-event-container">
+          <p class="montlight main-event-title"><span class="blue">Feb 28</span> - 8U Practice</p>
+          <p class="montlight main-event-detail">
+            <span class="grey">Location:</span> <span class="montbold">Bethesda 5</span> |
+            <span class="grey">Time:</span> <span class="montbold">7:00p-9:00p</span>
+          </p>
+        </div>
+        <div ng-repeat="event in events" class="main-event-container">
+          <p class="montlight main-event-title"><span class="blue">Feb 28</span> - 8U Practice</p>
+          <p class="montlight main-event-detail">
+            <span class="grey">Location:</span> <span class="montbold">Bethesda 5</span> |
+            <span class="grey">Time:</span> <span class="montbold">7:00p-9:00p</span>
+          </p>
+        </div>
+
+
         <a href="/events" class="btn btn-default button-padtop">View More</a>
       </div>
     </div>

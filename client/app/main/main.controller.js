@@ -10,6 +10,13 @@ angular.module('baseballApp')
       socket.syncUpdates('event', $scope.events);
     });
 
+    $scope.teams = [];
+    $http.get('/api/teams').success(function(teams) {
+      $scope.teams = teams;
+    });
+
+    
+
 
 
 
