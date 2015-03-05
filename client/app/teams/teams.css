@@ -9,3 +9,8 @@
 	margin-bottom:0;
 	font-size:1.2em;
 }
+.team-info-container {
+	margin-bottom:50px;
+	border-bottom:1px solid #eee;
+	padding-bottom:30px;
+}

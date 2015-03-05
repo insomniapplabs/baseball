@@ -11,7 +11,56 @@
   </div>
 </div>
 
+<div class="secondary-main">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
 
+
+        <div class="team-info-container" ng-repeat="team in teams">
+          <h2 class="montlight">{{team.age}} Skeeters</h2>
+
+            <div class="row">
+              <div class="col-md-6">
+                <div class="team-info-coaches">
+                  <h3 class="montbold">Staff</h3>
+                  <p class="montlight coaches-list" ng-repeat="coach in coaches" ng-if="coach.teamAge === team.age && coach.type === 'Head Coach'">{{coach.firstName}} {{coach.lastName}} - {{coach.type}}</p>
+                  <p class="montlight coaches-list" ng-repeat="coach in coaches" ng-if="coach.teamAge === team.age && coach.type === 'Assistant Coach'">{{coach.firstName}} {{coach.lastName}} - {{coach.type}}</p>
+                  <p class="montlight coaches-list" ng-repeat="coach in coaches" ng-if="coach.teamAge === team.age && coach.type === 'Pitching Coach'">{{coach.firstName}} {{coach.lastName}} - {{coach.type}}</p>
+                  <p class="montlight coaches-list" ng-repeat="coach in coaches" ng-if="coach.teamAge === team.age && coach.type === 'Strength Coach'">{{coach.firstName}} {{coach.lastName}} - {{coach.type}}</p>
+                </div>
+                <div class="team-info-players">
+                  <h3 class="montbold">Rosters</h3>
+                  <div ng-repeat="player in players | orderBy:'number.reverse'" ng-if="player.teamAge === team.age">
+                    <div class="row">
+                      <div class="col-md-1">
+                        <p class="montlight player-text">#{{player.number}}</p>
+                      </div>
+                      <div class="col-md-11">
+                        <p class="montlight player-text">{{player.firstName}} {{player.lastName}}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <img src="/assets/images/skeetersAll.png" width="100%" />
+              </div>
+            </div>
+
+
+          
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!--
 <div class="secondary-main">
   <div class="container">
     <div class="row">
@@ -75,4 +124,4 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
