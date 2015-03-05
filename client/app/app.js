@@ -9,6 +9,7 @@ angular.module('baseballApp', [
   'ui.bootstrap',
   'ui.calendar',
   'hc.marked'
+  //'datetimeFilter'
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
     $urlRouterProvider

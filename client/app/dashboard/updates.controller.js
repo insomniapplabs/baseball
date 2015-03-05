@@ -11,6 +11,12 @@ angular.module('baseballApp')
     	$scope.selectedUpdate = $scope.updates[0];
     })
 
+    $scope.teams = [];
+
+    $http.get('/api/teams').success(function(teams) {
+        $scope.teams = teams;
+    });
+
     $scope.addUpdate = function() {
     	$http.post('/api/updates', {
     		title: $scope.newUpdateTitle,

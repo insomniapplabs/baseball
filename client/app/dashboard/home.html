@@ -18,10 +18,40 @@
         </div>
         <button class="btn btn-default" ng-click="addTeam()">Add Team</button>
       </form>
+<br>
+      <p class="montlight"><a ui-sref="dashboard.rosters">Add Players</a>
+      | <a ui-sref="dashboard.coaches">Add Coaches</a></p>
     </div>
 
     <div class="col-md-offset-1 col-md-8">
       <h3>Upcoming Events</h3>
+        <table class="table table-condensed">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Title</th>
+                <th>Team</th>
+                <th>Type</th>
+                <th>Time</th>
+                <th>View</th>
+                <th>&nbsp;</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="event in currentEvents | filter:selectedType | filter:selectedTeam | orderBy:'start' | limitTo:8">
+                <td>{{event.start | date: 'EEEE, MMMM d'}}</td>
+                <td>{{event.title}}</td>
+                <td>{{event.team}}</td>
+                <td>{{event.type}}</td>
+                <td>{{event.className}}</td>
+                <td>View Detail</td>
+                <td><button type="button" class="close" ng-click="deleteEvent(event)"><span class="montbold">&times;</span></button></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <a ui-sref="dashboard.events" class="btn btn-default">Add Events</a>
+      </div>
     </div>
   </div>
 </div>

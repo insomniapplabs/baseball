@@ -17,16 +17,20 @@
       <div class="col-md-8">
         <div class="row">
           <div class="col-md-4">
-            <select class="form-control">
+            <select class="form-control" ng-model="selectedUpdateTeam">
               <option value="">-- select team to sort --</option>
+              <option ng-value="team.age" ng-repeat="team in teams">{{team.age}}</option>
             </select>
           </div>
         </div>
-        <div class="update-container" ng-repeat="update in updates">
+        <div class="update-container" ng-repeat="update in updates | filter:selectedUpdateTeam">
           <h2 class="montbold update-title">{{update.title}}</h2>
-          <p class="montlight update-detail">Posted by {{update.author}} on {{update.date}}</p>
+          <p class="montlight update-detail">Posted by {{update.author}} on {{update.date | date:'MMMM d, yyyy'}}</p>
           <div marked="update.text" class="markdown-text-container"></div>
+
+          <h3 ng-show="!updates.length">No updates at this time.</h3>
         </div>
+
       </div>
       <div class="col-md-offset-1 col-md-3">
         

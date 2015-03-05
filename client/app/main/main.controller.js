@@ -5,9 +5,22 @@ angular.module('baseballApp')
     
     $scope.events = [];
 
+    var today = new Date();
+
+   //$http.get('/api/events').success(function(events) {
+   //    var currentEvents = [];
+   //    //var today = Date.now;
+   //    events.forEach(function(event) {
+   //        if(event.start >= today) {
+   //            currentEvents.push(event);
+   //        }
+   //    });
+   //    return currentEvents;
+   //    $scope.currentEvents = currentEvents;
+   //});
+
     $http.get('/api/events').success(function(events) {
-      $scope.events = events;
-      socket.syncUpdates('event', $scope.events);
+     $scope.events = events;
     });
 
     $scope.teams = [];
@@ -15,7 +28,7 @@ angular.module('baseballApp')
       $scope.teams = teams;
     });
 
-    
+  
 
 
 

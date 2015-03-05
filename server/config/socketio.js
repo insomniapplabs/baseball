@@ -18,6 +18,7 @@ function onConnect(socket) {
   });
 
   // Insert sockets below
+  require('../api/coach/coach.socket').register(socket);
   require('../api/update/update.socket').register(socket);
   require('../api/event/event.socket').register(socket);
   require('../api/team/team.socket').register(socket);

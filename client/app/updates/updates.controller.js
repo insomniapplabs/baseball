@@ -9,4 +9,10 @@ angular.module('baseballApp')
   		$scope.updates = updates;
   	});
 
+  	$scope.teams = [];
+
+  	$http.get('/api/teams').success(function(teams) {
+  		$scope.teams = teams;
+  	});
+
   });

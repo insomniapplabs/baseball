@@ -4,7 +4,7 @@ angular.module('baseballApp')
   .config(function ($stateProvider) {
     $stateProvider
       .state('home', {
-        url: '/',
+        url: '/home',
         templateUrl: 'app/home/home.html',
         controller: 'HomeCtrl'
       });

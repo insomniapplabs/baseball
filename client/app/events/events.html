@@ -14,7 +14,7 @@
 <div class="secondary-main">
   <div class="container">
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-12">
         <div class="toggle-view-btns">
           <div class="btn-group">
             <label class="btn btn-default" ng-model="radioModel" btn-radio="'Calendar'" uncheckable><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>&nbsp;&nbsp;Calendar View</label>
@@ -22,13 +22,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-6">
-        <p class="text-right">
-          <span class="black-event">8U Events</span> |
-          <span class="blue-event">9U Events</span> |
-          <span class="gold-event">10U Events</span>
-        </p>
-      </div>
+      
 
     </div>
     <!-- CALENDAR VIEW -->
@@ -44,7 +38,7 @@
       <div class="row">
         <div class="col-md-4">
           <select class="form-control" ng-model="selectedTeam">
-            <option value="">-- Filter Events by Team --</option>
+            <option value="">-- All Team --</option>
             <option ng-value="team.age" ng-repeat="team in teams">{{team.age}}</option>
           </select>
         </div>
@@ -56,10 +50,19 @@
           <div>
             <div class="row">
               <div class="col-md-12">
-                <div class="event-item" ng-repeat="event in events | orderBy:'start' | filter:selectedTeam" ng-if="event.type === 'Practice' || event.type === 'Scrimmage'">
+                <!--<div class="event-item" ng-repeat="event in events | orderBy:'start' | filter:selectedTeam" ng-if="event.type === 'Practice' || event.type === 'Scrimmage'">
                   <h4 class="montbold event-date"><span class="red">{{event.start | date:'MMMM d'}}</span> - {{event.title}}</h4>
                   <p class="montlight event-detail"><span class="grey">Location:</span> <span class="blue montregular">{{event.location}}</span> | <span class="grey">Time:</span> <span class="blue montregular">{{event.time}}</span> | View&nbsp;Details</p>
-                </div>
+                </div>-->
+                <div ng-repeat="event in events | orderBy:'start' | filter:selectedTeam" ng-if="event.type === 'Practice'" class="main-event-container">
+          <p class="montregular main-event-title"><span class="blue">{{event.start | date:'MMMM d'}}</span> - {{event.title}}</p>
+          <p class="montlight main-event-detail">
+            <span class="grey">Location:</span>&nbsp;<span class="montlight">{{event.location}}</span> |
+            <span class="grey">Time:</span>&nbsp;<span class="montlight">{{event.time}}</span> |
+            <span class="grey">Team:</span>&nbsp;<span class="montlight">{{event.team}}</span>
+            <!--<br><a href="">Details</a>-->
+          </p>
+        </div>
                 
               </div>
             </div>
@@ -68,11 +71,19 @@
         <div class="col-md-offset-1 col-md-5">
           <h2 class="montbold events-header">Games & Tournaments</h2>
           <div class="row">
-              <div class="col-md-12">
-                <div class="event-item" ng-repeat="event in events | orderBy:'start' | filter:selectedTeam" ng-if="event.type === 'Game' || event.type === 'Tournament'">
+              <div class="col-md-12"><div ng-repeat="event in events | orderBy:'start' | filter:selectedTeam" ng-if="event.type === 'Game' || event.type === 'Tournament'" class="main-event-container">
+          <p class="montregular main-event-title"><span class="blue">{{event.start | date:'MMMM d'}}</span> - {{event.title}}</p>
+          <p class="montlight main-event-detail">
+            <span class="grey">Location:</span>&nbsp;<span class="montlight">{{event.location}}</span> |
+            <span class="grey">Time:</span>&nbsp;<span class="montlight">{{event.time}}</span> |
+            <span class="grey">Team:</span>&nbsp;<span class="montlight">{{event.team}}</span>
+            <!--<br><a href="">Details</a>-->
+          </p>
+        </div>
+                <!--<div class="event-item" ng-repeat="event in events | orderBy:'start' | filter:selectedTeam" ng-if="event.type === 'Game' || event.type === 'Tournament'">
                   <h4 class="montbold event-date"><span class="red">{{event.start | date:'MMMM d'}}</span> - {{event.title}}</h4>
                   <p class="montlight event-detail"><span class="grey">Location:</span> <span class="blue montregular">{{event.location}}</span> | <span class="grey">Time:</span> <span class="blue montregular">{{event.time}}</span> | View&nbsp;Details</p>
-                </div>
+                </div>-->
                 
               </div>
             </div>

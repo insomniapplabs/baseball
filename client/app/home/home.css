@@ -261,7 +261,7 @@ fieldset[disabled] .btn-reset.active {
 .home-main { padding:30px 0 50px 0; }
 .home-sponsor {
   padding:50px 0 70px 0;
-  background:#eee;
+  background:#f5f5f5;
   /*background-image:url('/assets/images/dark_wood.png');*/
   background-repeat:repeat;
   background-position:center;

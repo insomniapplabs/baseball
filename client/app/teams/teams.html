@@ -11,6 +11,7 @@
   </div>
 </div>
 
+
 <div class="secondary-main">
   <div class="container">
     <div class="row">
@@ -21,11 +22,40 @@
               <div class="row">
                 <div class="col-md-6">
                   <h3 class="montbold">Staff</h3>
-                  <p class="montlight">Kyle Manship - Head Coach</p>
-                  <p class="montlight">John Smith - Asst. Coach</p>
-                  <p class="montlight">Larry Bold - Asst. Coach</p>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div ng-repeat="coach in coaches" ng-if="coach.teamAge ===  team.age && coach.type === 'Head Coach'">
+                        <p class="montlight coaches-list">{{coach.firstName}} {{coach.lastName}} - Head Coach</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div ng-repeat="coach in coaches" ng-if="coach.teamAge === team.age && coach.type === 'Assistant Coach'">
+                        <p class="montlight coaches-list">{{coach.firstName}} {{coach.lastName}} - Assistant Coach</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div ng-repeat="coach in coaches" ng-if="coach.teamAge === team.age && coach.type === 'Pitching Coach'">
+                        <p class="montlight coaches-list">{{coach.firstName}} {{coach.lastName}} - Pitching Coach</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div ng-repeat="coach in coaches" ng-if="coach.teamAge === team.age && coach.type === 'Conditioning Coach'">
+                        <p class="montlight coaches-list">{{coach.firstName}} {{coach.lastName}} - Conditioning Coach</p>
+                      </div>
+                    </div>
+                  </div>
+
                   <h3 class="montbold">Roster</h3>
-                  <div class="row" ng-repeat="player in players" ng-if="player.teamAge === team.age">
+                  <div class="row" ng-repeat="player in players | orderBy:'number.reverse'" ng-if="player.teamAge === team.age">
                     <div class="col-md-1">
                       <p class="montlight player-text">#{{player.number}}</p>
                     </div>

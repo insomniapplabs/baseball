@@ -28,4 +28,10 @@ angular.module('baseballApp')
       socket.unsyncUpdates('team');
     });
 
+    $scope.events = [];
+
+    $http.get('/api/events').success(function(events) {
+      $scope.events = events;
+    });
+
   });

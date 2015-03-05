@@ -14,5 +14,11 @@ angular.module('baseballApp')
     	$scope.players = players;
     });
 
+    $scope.coaches = [];
+
+    $http.get('api/coaches').success(function(coaches) {
+        $scope.coaches = coaches;
+    });
+
     
   });

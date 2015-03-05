@@ -30,7 +30,7 @@
 				</div>
 				<div class="form-group">
 					<label>Date</label>
-					<input class="form-control" ng-model="newUpdateDate" />
+					<input class="form-control" ng-model="newUpdateDate" placeholder="dd/mm/yyyy"/>
 				</div>
 				<div class="form-group">
 					<label>Author</label>
@@ -39,6 +39,7 @@
 				<div class="form-group">
 					<select class="form-control">
 						<option value="">-- Select Team --</option>
+						<option ng-value="team.age" ng-repeat="team in teams">{{team.age}}</option>
 					</select>
 				</div>
 				<div class="form-group">
