@@ -18,8 +18,19 @@ angular.module('baseballApp')
     $scope.eventSource = {url: '/api/events'};
 
     $scope.eventSources = [$scope.eventSource];
-
-    $scope.radioModel = 'Calendar';
     
+    $scope.visibleCalendar = true;
+
+    $scope.viewCalendar = function() {
+      $scope.visibleCalendar = true;
+      $scope.visibleList = false;
+    };
+
+    $scope.visibleList = false;
+
+    $scope.viewList = function() {
+      $scope.visibleList = true;
+      $scope.visibleCalendar = false;
+    };
 
   });

@@ -41,7 +41,7 @@
 							{{update.title}}
 							<button type="button" class="close" ng-click="deleteUpdate(update)"><span class="montbold">&times;</span></button>
 						</h3>
-						<p class="post-list-detail-mid montlight">Posted by {{update.author}} on {{update.date}}</p>
+						<p class="post-list-detail-mid montlight">Posted by {{update.author}} on {{update.date | date:'MMMM d, yyyy'}}</p>
 						<p class="post-list-detail-btm draft" ng-show="update.draft === true">Draft</p>
 						<p class="post-list-detail-btm posted" ng-show="update.draft === false">
 							Published

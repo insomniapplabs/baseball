@@ -49,3 +49,10 @@
 .black-event { color:#fff;background:#222;padding:4px; }
 .gold-event { background:#B5A167;color:#fff;padding:4px; }
 .blue-event { background:#095eaa;color:#fff;padding:4px; }
+
+.view-text {
+	font-size:1.2em;
+}
+.calendar-list-view {
+	margin-top:0px;
+}

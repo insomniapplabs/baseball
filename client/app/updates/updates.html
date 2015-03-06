@@ -25,7 +25,7 @@
         </div>
         <div class="update-container" ng-repeat="update in updates | filter:selectedUpdateTeam">
           <h2 class="montbold update-title">{{update.title}}</h2>
-          <p class="montlight update-detail">Posted by {{update.author}} on {{update.date | date:'MMMM d, yyyy'}}</p>
+          <p class="montlight update-detail">Posted by {{update.author}} on {{update.date | date:'MMMM d, yyyy'}} for {{update.team}}</p>
           <div marked="update.text" class="markdown-text-container"></div>
 
           <h3 ng-show="!updates.length">No updates at this time.</h3>

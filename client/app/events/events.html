@@ -16,25 +16,38 @@
     <div class="row">
       <div class="col-md-12">
         <div class="toggle-view-btns">
+          <div>
+            <p class="montlight view-text"><a href="" ng-click="viewCalendar()">Calendar View</a> |
+              <a href="" ng-click="viewList()">List View</a>
+            </p>
+          </div>
+          <!--
           <div class="btn-group">
             <label class="btn btn-default" ng-model="radioModel" btn-radio="'Calendar'" uncheckable><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>&nbsp;&nbsp;Calendar View</label>
             <label class="btn btn-default" ng-model="radioModel" btn-radio="'List'" uncheckable><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;&nbsp;List View</label>
           </div>
+          -->
+
         </div>
       </div>
       
 
     </div>
     <!-- CALENDAR VIEW -->
-    <div class="row">
+    <div class="row hidden-xs" ng-show="visibleCalendar">
       <div class="col-md-12">
-        <div ng-show="radioModel === 'Calendar'">
+        <div>
           <div ui-calendar ng-model="eventSources"></div>
         </div>
       </div>
     </div>
+
+
+
+
+
     <!-- LIST VIEW -->
-    <div ng-show="radioModel === 'List'">
+    <div class="calendar-list-view" ng-show="visibleList">
       <div class="row">
         <div class="col-md-4">
           <select class="form-control" ng-model="selectedTeam">
@@ -50,19 +63,16 @@
           <div>
             <div class="row">
               <div class="col-md-12">
-                <!--<div class="event-item" ng-repeat="event in events | orderBy:'start' | filter:selectedTeam" ng-if="event.type === 'Practice' || event.type === 'Scrimmage'">
-                  <h4 class="montbold event-date"><span class="red">{{event.start | date:'MMMM d'}}</span> - {{event.title}}</h4>
-                  <p class="montlight event-detail"><span class="grey">Location:</span> <span class="blue montregular">{{event.location}}</span> | <span class="grey">Time:</span> <span class="blue montregular">{{event.time}}</span> | View&nbsp;Details</p>
-                </div>-->
                 <div ng-repeat="event in events | orderBy:'start' | filter:selectedTeam" ng-if="event.type === 'Practice'" class="main-event-container">
-          <p class="montregular main-event-title"><span class="blue">{{event.start | date:'MMMM d'}}</span> - {{event.title}}</p>
-          <p class="montlight main-event-detail">
-            <span class="grey">Location:</span>&nbsp;<span class="montlight">{{event.location}}</span> |
-            <span class="grey">Time:</span>&nbsp;<span class="montlight">{{event.time}}</span> |
-            <span class="grey">Team:</span>&nbsp;<span class="montlight">{{event.team}}</span>
-            <!--<br><a href="">Details</a>-->
-          </p>
-        </div>
+                  <p class="montregular main-event-title"><span class="blue">{{event.start | date:'MMMM d'}}</span> - {{event.title}}</p>
+                  <p class="montlight main-event-detail">
+                  <span class="grey">Location:</span>&nbsp;<span class="montlight">{{event.location}}</span> |
+                  <span class="grey">Time:</span>&nbsp;<span class="montlight">{{event.time}}</span> |
+                  <span class="grey">Team:</span>&nbsp;<span class="montlight">{{event.team}}</span>
+                  <!--<br><a href="">Details</a>-->
+                  </p>
+                  
+                </div>
                 
               </div>
             </div>
