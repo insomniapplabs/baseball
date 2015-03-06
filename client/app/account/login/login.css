@@ -1,1 +1,33 @@
-
+.login-container {
+	margin-top:200px;
+	/*background-color:#eee;
+	border:1px solid #ccc;
+	border-radius:2px;
+	padding:30px;*/
+}
+.login-header {
+	text-transform:uppercase;
+	text-align:center;
+	margin:0;
+	padding:20px 0;
+}
+.input-lg {
+	border-radius:0;
+	font-family:'montlight';
+}
+.input-borderless {
+	border-top:none;
+	border-right:none;
+	border-left:none;
+	box-shadow:none;
+	padding-left:0;
+	text-align:center;
+}
+input.input-borderless:focus {
+	outline:none;
+	box-shadow:none;
+	border-bottom:1px solid #ccc;
+}
+.login-btn {
+	margin-top:10px;
+}

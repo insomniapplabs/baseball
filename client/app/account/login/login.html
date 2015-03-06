@@ -1,5 +1,25 @@
-<div ng-include="'components/navbar/navbar.html'"></div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-offset-4 col-md-4">
+      <div class="login-container">
+        <h3 class="montlight login-header">Admin Login</h3>
+        <form name="form" ng-submit="login(form)" novalidate>
+        <div class="form-group">
+          <label class="sr-only">Email</label>
+          <input name="email" type="email" class="form-control input-lg input-borderless" ng-model="user.email" placeholder="Email" required />
+        </div>
+        <div class="form-group">
+          <label class="sr-only">Password</label>
+          <input name="password" type="password" class="form-control input-lg input-borderless" ng-model="user.password" placeholder="Password" required />
+        </div>
+        <button class="btn btn-default btn-lg btn-block login-btn" type="submit">Login</button>
+        <form>
+      </div>
+    </div>
+  </div>
+</div>
 
+<!--
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
@@ -47,3 +67,4 @@
   </div>
   <hr>
 </div>
+-->

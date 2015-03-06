@@ -9,7 +9,7 @@ angular.module('baseballApp')
         controller: 'LoginCtrl'
       })
       .state('signup', {
-        url: '/signup',
+        url: '/signup2014',
         templateUrl: 'app/account/signup/signup.html',
         controller: 'SignupCtrl'
       })
