@@ -21,6 +21,7 @@
         <li><a ui-sref="events">Calendar</a></li>
         <li><a ui-sref="teams">Teams</a></li>
         <li><a ui-sref="updates">Updates</a></li>
+        <li ng-show="isLoggedIn()"><a ui-sref="dashboard.home">Dashboard</a></li>
         <!--<li ng-hide="isLoggedIn()" ng-class="{active: isActive('/signup')}"><a href="/signup">Sign up</a></li>
         <li ng-hide="isLoggedIn()" ng-class="{active: isActive('/login')}"><a href="/login">Login</a></li>
         <li ng-show="isLoggedIn()"><p class="navbar-text">Hello {{ getCurrentUser().name }}</p> </li>

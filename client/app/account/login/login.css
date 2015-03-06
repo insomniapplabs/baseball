@@ -28,6 +28,5 @@ input.input-borderless:focus {
 	box-shadow:none;
 	border-bottom:1px solid #ccc;
 }
-.login-btn {
-	margin-top:10px;
-}
+
+
