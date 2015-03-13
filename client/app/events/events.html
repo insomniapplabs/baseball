@@ -30,7 +30,7 @@
 
         </div>
       </div>
-      
+
 
     </div>
     <!-- CALENDAR VIEW -->
@@ -51,7 +51,7 @@
       <div class="row">
         <div class="col-md-4">
           <select class="form-control" ng-model="selectedTeam">
-            <option value="">-- All Team --</option>
+            <option value="">-- All Teams --</option>
             <option ng-value="team.age" ng-repeat="team in teams">{{team.age}}</option>
           </select>
         </div>
@@ -63,7 +63,7 @@
           <div>
             <div class="row">
               <div class="col-md-12">
-                <div ng-repeat="event in events | orderBy:'start' | filter:selectedTeam" ng-if="event.type === 'Practice'" class="main-event-container">
+                <div ng-repeat="event in events | orderBy:'start' | filter:selectedTeam" ng-if="event.type === 'Practice' || event.type === 'Scrimmage'" class="main-event-container">
                   <p class="montregular main-event-title"><span class="blue">{{event.start | date:'MMMM d'}}</span> - {{event.title}}</p>
                   <p class="montlight main-event-detail">
                   <span class="grey">Location:</span>&nbsp;<span class="montlight">{{event.location}}</span> |
@@ -71,9 +71,9 @@
                   <span class="grey">Team:</span>&nbsp;<span class="montlight">{{event.team}}</span>
                   <!--<br><a href="">Details</a>-->
                   </p>
-                  
+
                 </div>
-                
+
               </div>
             </div>
           </div>
@@ -94,7 +94,7 @@
                   <h4 class="montbold event-date"><span class="red">{{event.start | date:'MMMM d'}}</span> - {{event.title}}</h4>
                   <p class="montlight event-detail"><span class="grey">Location:</span> <span class="blue montregular">{{event.location}}</span> | <span class="grey">Time:</span> <span class="blue montregular">{{event.time}}</span> | View&nbsp;Details</p>
                 </div>-->
-                
+
               </div>
             </div>
           </div>
