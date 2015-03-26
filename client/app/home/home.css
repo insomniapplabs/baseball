@@ -250,7 +250,7 @@ fieldset[disabled] .btn-reset.active {
 
 .banner-container {
   background-image:url('/assets/images/skeeterWM.png');
-  background-position:right;
+  background-position:center;
   background-color:#095eaa;
   background-repeat:no-repeat;
 }
